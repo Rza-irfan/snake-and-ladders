@@ -1,0 +1,66 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    padding: 20px;
+}
+
+#chessboard {
+    display: grid;
+    position: relative;
+    flex: 1;
+    grid-template-columns: repeat(10, 57px);
+    grid-template-rows: repeat(10, 57px);
+    gap: 0; /* No gap between boxes */
+    width: 570px; /* 10 boxes of 57px each */
+    height: 570px; /* 10 boxes of 57px each */
+    border: 3px solid rgb(0, 0, 0); /* Outer border for the chessboard */
+}
+
+.box {
+    width: 57px;
+    height: 57px;
+    border: 2px solid rgb(184, 127, 80); /* Border for each box */
+    box-sizing: border-box; /* Ensures border is included in the element's width and height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #efca8f; /* Light square */
+}
+.box-number {
+    opacity:0.25;
+    color: #4a2d00;
+    z-index: 0;
+}
+
+.sidebar {
+    flex: 0.3; /* Take up 30% of the container's width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.score-board h1 {
+    margin: 10px 0;
+}
+
+.play-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.ladder {
+    background-color: green;
+    z-index: 1;
+    position: absolute;
+}
+
+.snake {
+    background-color: red;
+    z-index: 1;
+    position: absolute;
+}
